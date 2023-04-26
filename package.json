@@ -1,0 +1,15 @@
+{
+  "name": "stargate-crosschain-swap",
+  "author": "https://twitter.com/sir_fedos",
+  "dependencies": {
+    "@typechain/ethers-v5": "^10.2.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "minimist": "^1.2.8",
+    "typechain": "^8.1.1"
+  },
+  "scripts": {
+    "generate-typechain": "typechain --target ethers-v5 --out-dir typechain '**/*.abi.json'",
+    "swap-usdc-from-ftm-to-polygon": "npx ts-node ./scripts/crossChainSwap.ts --fromNetwork=Fantom --toNetwork=Polygon --token=USDC --amount=5"
+  }
+}
